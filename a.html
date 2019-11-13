@@ -1,0 +1,199 @@
+<doc!<!DOCTYPE html>
+    <html>
+      <head>
+      <style media="screen">
+      table { font-size:1.5rem;
+         text-align: center;
+         border:8px solid white;
+         padding:4px;
+         margin:0;
+         display:block;}
+        body {
+      background:brown;
+      padding: 2rem;
+
+    }
+
+    h2 {
+      font-family: 'Arial';
+      color: #fff;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 3rem;
+      line-height: 0.75;
+    }
+
+    span {
+      display: block;
+    }
+
+    span:not(.light) {
+      opacity: 0;
+      animation: flashText .5s ease-out alternate infinite;
+    }
+
+    span.light {
+      position: relative;
+      display: inline-block;
+
+      &:before {
+        position: absolute;
+        left: 0;
+        top: -10%;
+        width: 100%;
+        height: 120%;
+        background: #fff;
+        filter: blur(10px);
+        content: "";
+        opacity: 0;
+        animation: flash .5s ease-out alternate infinite;
+      }
+    }
+
+    @keyframes flash{
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes flashText {
+      to {
+        opacity: 0.15;
+      }
+    }
+    storong {color:white;
+    }
+    h2  {background-image:url('data:image/jpeg;base64,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')}
+    a{color:white;}
+
+
+
+
+    tr {text-align:center;}
+    td {text-align:center;
+    width:400px;}
+    table {border-spacing:200px; border-collapse: separate;}
+
+    .like-content {
+    display: inline-block;
+    width: 100%;
+    margin: 40px 0 0;
+    padding: 40px 0 0;
+    font-size: 18px;
+    border-top: 10px dashed #eee;
+    text-align: center;
+}
+.like-content span {
+    color: #9d9da4;
+    font-family: monospace;
+}
+.like-content .btn-secondary {
+      display: block;
+      margin: 40px auto 0px;
+    text-align: center;
+    background: #ed2553;
+    border-radius: 3px;
+    box-shadow: 0 10px 20px -8px rgb(240, 75, 113);
+    padding: 10px 17px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    text-decoration: none;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+}
+.like-content .btn-secondary:hover {
+      transform: translateY(-3px);
+}
+.like-content .btn-secondary .fa {
+      margin-right: 5px;
+}
+.animate-like {
+    animation-name: likeAnimation;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-duration: 0.65s;
+}
+@keyframes likeAnimation {
+  0%   { transform: scale(30); }
+  100% { transform: scale(1); }
+}
+
+
+
+
+
+      </style>
+
+
+
+      </head>
+
+
+      <body>
+        <h2>
+          <span>THE</span>
+          <span class="light">GREAT AUTHORS</span>
+          <span></span>
+          <span>INTERESTED</span>
+          <span>BEHIND STORY</span>
+        </h2>
+        <table border="1">
+     <thead>
+       <th><font color=white><strong>AUTHORS</strong></font></style></th><th><font color=white><strong>THEIR INFORMATION</strong></font></th>
+
+             </tr>
+           </thead>
+           <tbody>
+             <tr>
+               <td>  <a href="2.html">edgar allan poe</a></td>
+               <td><a href="https://en.wikipedia.org/wiki/Edgar_Allan_Poe">about he</a></td>
+             </tr>
+             <tr> <td>  <a href="2.html">stephen king</a></td>
+               <td><a href="https://ko.wikipedia.org/wiki/%EC%8A%A4%ED%8B%B0%EB%B8%90_%ED%82%B9">about he</a></td>
+             </tr>
+             <tr>
+               <td><a href="2.html">William Shakespeare</a></td>
+               <td><a href="https://ko.wikipedia.org/wiki/%EC%9C%8C%EB%A6%AC%EC%97%84 _%EC%85%B0%EC%9D%B5%EC%8A%A4%ED%94%BC%EC%96%B4">about he</a></td>
+             </tr>
+             <tr>
+               <td><a href="2.html">Mary Wollstonecraft Shelley</a></td><td><a href="https://ko.wikipedia.org/wiki/%EB%A9%94%EB%A6%AC_%EC%85%B8%EB%A6%AC"
+                 >about she</a></td>
+             </tr>
+             <tr>
+               <td>Lorem</td><td>Ipsum</td>
+             </tr>
+
+     </tbody>
+   </table>
+   <div class="like-content">
+  <button class="btn-secondary like-review">
+    <i class="fa fa-heart" aria-hidden="true"></i> Like
+  </button>
+
+</div>
+</body>
+</html>
+<p><div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://assign-1.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</p>
